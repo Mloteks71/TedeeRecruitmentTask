@@ -43,7 +43,6 @@ namespace Tedee.Repositories
             return (GetTrips()?.Any(e => e.Name == name)).GetValueOrDefault();
         }
 
-
         public bool TripByCountryExists(int countryId)
         {
             return (GetTrips()?.Any(x => x.Country == (Country)countryId)).GetValueOrDefault();
@@ -60,6 +59,5 @@ namespace Tedee.Repositories
         {
             return query.Where(x => (int)x.Country == countryId);
         }
-
     }
 }

@@ -84,9 +84,9 @@ namespace Tedee.Controllers.Trips
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<BaseTrip>> AddTrip(BaseTrip trip)
         {
-            if (!_tripRepository.TripByNameExists(trip.Name))
+            if (_tripRepository.TripByNameExists(trip.Name))
             {
-                throw new HttpResponseException(StatusCodes.Status404NotFound, "Trip with provided name already exists");
+                throw new HttpResponseException(StatusCodes.Status400BadRequest, "Trip with provided name already exists");
             }
 
             var newTrip = new Trip(trip);

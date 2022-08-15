@@ -17,10 +17,5 @@ namespace Tedee.Models
         {
             Email = baseEmail.Email;
         }
-
-        public RegisteredEmail(string email) : base(email)
-        {
-            Trips = new List<Trip>();
-        }
     }
 }

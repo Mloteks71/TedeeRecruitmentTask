@@ -23,14 +23,5 @@ namespace Tedee.Controllers.Trips.Dto
             StartDate = baseTrip.StartDate;
             SeatsCount = baseTrip.SeatsCount;
         }
-
-        public TripNoDescription(Guid id, string name, Country country, DateTime startDate, uint seatsCount)
-        {
-            Id = id;
-            Name = name;
-            Country = country;
-            StartDate = startDate;
-            SeatsCount = seatsCount;
-        }
     }
 }

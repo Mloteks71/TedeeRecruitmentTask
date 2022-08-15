@@ -20,10 +20,5 @@ namespace Tedee.Models
         {
             Emails = new List<RegisteredEmail>();
         }
-
-        public Trip(Guid id, string name, Country country, string description, DateTime startDate, uint seatsCount) : base(name, country, description, startDate, seatsCount)
-        { 
-            Emails = new List<RegisteredEmail>();
-        }
     }
 }
